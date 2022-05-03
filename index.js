@@ -40,14 +40,16 @@ const getWeather = async (url) => {
     try {
         console.log(data);
         if (data.cod === 200) {
+            boxCity.innerHTML = `Weather in ${name}`;
             temperature.innerHTML = 
                 `${Math.round(temp - 273.15)}°C 
                 <figure class="temperature">
                     <img src="http://openweathermap.org/img/wn/${icon}.png" alt="icon">
                 </figure>`;
             cloud.innerHTML = `${description}`;
-            hum.innerHTML += `${humidity}%`;
-            speed.innerHTML += `${data.wind.speed} m/s`;
+            hum.innerHTML = `Humidity: ${humidity}%`;
+            speed.innerHTML = `Windy Speed ${data.wind.speed} m/s`;
+            inputSearch.value = '';
         } else if (data.cod === 404) {
             console.log('No se encontró la ciudad');
         }
