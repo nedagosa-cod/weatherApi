@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 body{
     background-image: url(./img/back.jpg);
@@ -63,4 +64,23 @@ body{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+.temperature{
+    display: flex;
+    justify-content: center;
+    background: rgb(86, 208, 159);
+}
+
+.temperature img{
+    width: 60px;
+}
+.description {
+    display: flex;
+    margin-top: 8px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
